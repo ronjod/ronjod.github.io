@@ -163,7 +163,7 @@
       notify: false,
       verify: false,
       avatar: "robohash",
-      placeholder: "欢迎大家与我交流，需要正确填写邮箱, 才能及时收到回复哦♪(^∇^*)",
+      placeholder: "欢迎大家交流，需要正确填写邮箱, 才能及时收到回复哦♪(^∇^*)",
       path: getPsgID()
     });
 
