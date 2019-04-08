@@ -11,14 +11,14 @@
       now = new Date().getTime();
 
     if(passwords.includes(password) && now < expires) {
-      return; 
+      return;
     }
 
     password = prompt('输入您的名称小写全拼 (例如: 李三 => lisan)');
     password = sha256(password || '');
 
     if(passwords.includes(password)) {
-      expires = now + day * 3;
+      expires = now + day ;
       window.localStorage.setItem('auth', btoa(`${password}:${expires}`));
     } else {
       alert('您没有阅读权限');
@@ -28,10 +28,10 @@
 
   // print github and demo info
   console.log(
-    '\n%c Theme-AD v2.4.0 %c' + 
-    ' 🎉 https://github.com/dongyuanxin/theme-ad 🎉\n' + 
-    '\n%c Preview Online %c' + 
-    ' 🔍 https://godbmw.com/ 🔍  \n' , 
+    '\n%c Theme-AD v2.4.0 %c' +
+    ' 🎉 https://github.com/dongyuanxin/theme-ad 🎉\n' +
+    '\n%c Preview Online %c' +
+    ' 🔍 https://godbmw.com/ 🔍  \n' ,
     'color: #fadfa3; background: #030307; padding:3px 0;', '', 'color: #fadfa3; background: #030307; padding:3px 0;', ''
   );
 
